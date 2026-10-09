@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng nhập - Tuyển dụng Nội bộ</title>
+    <script src="api-config.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -471,7 +472,8 @@
                                 d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
                             </path>
                         </svg>
-                        <input type="password" id="password" class="form-control" placeholder="Mật khẩu" required autocomplete="new-password">
+                        <input type="password" id="password" class="form-control" placeholder="Mật khẩu" required
+                            autocomplete="new-password">
                         <svg class="toggle-password" id="togglePassword" fill="none" stroke="currentColor"
                             stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -530,7 +532,7 @@
                 document.getElementById('submitBtn').click();
             }
         });
-        
+
         document.getElementById('username').addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
                 e.preventDefault();

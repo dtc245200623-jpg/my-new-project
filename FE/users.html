@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý Tài khoản - Tuyển dụng Nội bộ</title>
+    <script src="api-config.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
@@ -606,10 +607,10 @@
         init();
     </script>
     <script>
-        // Idle timeout script (30 seconds)
+        // Idle timeout script (90 seconds)
         (function() {
             let idleTime = 0;
-            const maxIdleTime = 30; // seconds
+            const maxIdleTime = 90; // seconds
 
             function resetTimer() {
                 idleTime = 0;

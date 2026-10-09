@@ -15,8 +15,7 @@
         }
 
         body {
-            background: url('images/bg-interview.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #f4f7fe;
             display: flex;
             height: 100vh;
             overflow: hidden;
@@ -324,223 +323,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
         }
 
-        /* Chatbot UI */
-        .chatbot-fab {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #6366f1, #4f46e5);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: 1000;
-        }
 
-        .chatbot-fab:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 30px rgba(79, 70, 229, 0.5);
-        }
-
-        .chatbot-fab svg {
-            width: 28px;
-            height: 28px;
-            color: white;
-            fill: currentColor;
-        }
-
-        .chatbot-window {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            width: 350px;
-            height: 500px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            z-index: 1000;
-            opacity: 0;
-            pointer-events: none;
-            transform: translateY(20px) scale(0.95);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .chatbot-window.open {
-            opacity: 1;
-            pointer-events: auto;
-            transform: translateY(0) scale(1);
-        }
-
-        .chatbot-header {
-            background: linear-gradient(135deg, #6366f1, #4f46e5);
-            padding: 20px;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .chatbot-header h3 {
-            font-size: 16px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .chatbot-close {
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            opacity: 0.8;
-            transition: 0.2s;
-            display: flex;
-        }
-
-        .chatbot-close:hover {
-            opacity: 1;
-            transform: scale(1.1);
-        }
-
-        .chatbot-messages {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            background: #f8fafc;
-        }
-
-        .chat-msg {
-            max-width: 80%;
-            padding: 12px 16px;
-            border-radius: 16px;
-            font-size: 14px;
-            line-height: 1.5;
-            word-wrap: break-word;
-        }
-
-        .chat-msg.bot {
-            background: white;
-            color: #1e293b;
-            align-self: flex-start;
-            border-bottom-left-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
-            border: 1px solid #e2e8f0;
-        }
-
-        .chat-msg.user {
-            background: #4f46e5;
-            color: white;
-            align-self: flex-end;
-            border-bottom-right-radius: 4px;
-            box-shadow: 0 2px 5px rgba(79, 70, 229, 0.2);
-        }
-
-        .chatbot-input-area {
-            padding: 16px;
-            background: white;
-            border-top: 1px solid #e2e8f0;
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .chatbot-input {
-            flex: 1;
-            padding: 12px 16px;
-            border: 1px solid #cbd5e1;
-            border-radius: 20px;
-            font-size: 14px;
-            outline: none;
-            transition: 0.2s;
-            background: #f8fafc;
-        }
-
-        .chatbot-input:focus {
-            border-color: #4f46e5;
-            background: white;
-        }
-
-        .chatbot-send {
-            background: #4f46e5;
-            color: white;
-            border: none;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: 0.2s;
-            flex-shrink: 0;
-        }
-
-        .chatbot-send:hover {
-            background: #4338ca;
-            transform: scale(1.05);
-        }
-
-        .chatbot-send svg {
-            width: 20px;
-            height: 20px;
-            stroke: currentColor;
-            stroke-width: 2;
-            fill: none;
-        }
-
-        .typing-indicator {
-            display: flex;
-            gap: 4px;
-            padding: 12px 16px;
-            background: white;
-            border-radius: 16px;
-            border-bottom-left-radius: 4px;
-            align-self: flex-start;
-            border: 1px solid #e2e8f0;
-            align-items: center;
-        }
-
-        .typing-dot {
-            width: 6px;
-            height: 6px;
-            background: #94a3b8;
-            border-radius: 50%;
-            animation: typing 1.4s infinite ease-in-out both;
-        }
-
-        .typing-dot:nth-child(1) {
-            animation-delay: -0.32s;
-        }
-
-        .typing-dot:nth-child(2) {
-            animation-delay: -0.16s;
-        }
-
-        @keyframes typing {
-
-            0%,
-            80%,
-            100% {
-                transform: scale(0);
-            }
-
-            40% {
-                transform: scale(1);
-            }
-        }
     </style>
 </head>
 
@@ -585,105 +368,16 @@
 
         <div class="content-area">
             <div class="container">
-                <h1 id="pageTitle"
-                    style="text-align: center; color: #1e3a8a; font-size: 32px; font-weight: 800; margin-bottom: 10px;">
-                    Chào mừng bạn quay trở lại hệ thống</h1>
+                <h1 id="pageTitle" style="color: #1e3a8a; font-size: 26px; font-weight: 700; margin-bottom: 24px;">Tổng quan Hệ thống</h1>
                 <div id="pageContent">
-                    <div id="welcomeAlert" style="transition: opacity 0.8s ease;">
-                        <p style="text-align: center; color: #64748b; font-size: 16px; margin-bottom: 30px;">Hôm nay bạn
-                            muốn thực hiện công việc gì?</p>
-                        <div class="tasks-grid" id="tasksContainer">
-                            <!-- Tasks generated here -->
-                        </div>
+                    <div class="tasks-grid" id="tasksContainer">
+                        <!-- Stats cards generated here -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Chatbot Widget -->
-    <div class="chatbot-fab" id="chatbotFab" onclick="toggleChatbot()">
-        <svg viewBox="0 0 24 24">
-            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"></path>
-        </svg>
-    </div>
-
-    <div class="chatbot-window" id="chatbotWindow">
-        <div class="chatbot-header">
-            <div>
-                <h3 style="margin-bottom: 2px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                    </svg> Trợ lý Tuyển dụng</h3>
-                <div style="font-size: 11px; opacity: 0.9;">Hotline hỗ trợ: 000887765414</div>
-            </div>
-            <button class="chatbot-close" onclick="toggleChatbot()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 6L6 18M6 6l12 12"></path>
-                </svg>
-            </button>
-        </div>
-        <div class="chatbot-messages" id="chatbotMessages">
-            <div class="chat-msg bot">Xin chào! Tôi là Trợ lý Ảo. Tôi có thể giúp gì cho bạn hôm nay? (Hotline HT:
-                000887765414)</div>
-        </div>
-        <div class="chatbot-input-area">
-            <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Nhập tin nhắn..."
-                onkeypress="handleChatbotKeyPress(event)">
-            <button class="chatbot-send" onclick="sendChatbotMessage()">
-                <svg viewBox="0 0 24 24">
-                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
-                </svg>
-            </button>
-        </div>
-    </div>
-
-    <!-- Modal Đổi Mật Khẩu -->
-    <div id="changePasswordModal" class="modal">
-        <div class="modal-content" style="max-width: 400px; padding: 24px;">
-            <div class="modal-header"
-                style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px; margin-bottom: 20px;">
-                <h2 style="font-size: 18px; color: #1e293b; margin: 0;">Đổi Mật Khẩu</h2>
-                <span class="close-modal" onclick="closeChangePasswordModal()"
-                    style="cursor: pointer; font-size: 24px; color: #94a3b8;">&times;</span>
-            </div>
-            <div class="modal-body">
-                <form id="changePasswordForm">
-                    <div class="form-group" style="margin-bottom: 15px;">
-                        <label
-                            style="display: block; margin-bottom: 8px; color: #475569; font-size: 14px; font-weight: 500;">Mật
-                            khẩu hiện tại</label>
-                        <input type="password" id="cp_current"
-                            style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; outline: none;"
-                            required>
-                    </div>
-                    <div class="form-group" style="margin-bottom: 15px;">
-                        <label
-                            style="display: block; margin-bottom: 8px; color: #475569; font-size: 14px; font-weight: 500;">Mật
-                            khẩu mới</label>
-                        <input type="password" id="cp_new" placeholder="Tối thiểu 8 ký tự, gồm cả chữ và số"
-                            style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; outline: none;"
-                            required>
-                    </div>
-                    <div class="form-group" style="margin-bottom: 20px;">
-                        <label
-                            style="display: block; margin-bottom: 8px; color: #475569; font-size: 14px; font-weight: 500;">Xác
-                            nhận mật khẩu mới</label>
-                        <input type="password" id="cp_confirm"
-                            style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; outline: none;"
-                            required>
-                    </div>
-                    <div style="display:flex; justify-content:flex-end; gap:10px;">
-                        <button type="button" class="btn-secondary" onclick="closeChangePasswordModal()"
-                            style="padding: 10px 16px; background: #f1f5f9; color: #475569; border: none; border-radius: 6px; cursor: pointer; font-weight: 500;">Hủy</button>
-                        <button type="submit" class="btn-primary" id="cp_submit"
-                            style="padding: 10px 16px; background: #2563eb; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 500;">Lưu
-                            thay đổi</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
     <script>
         const ROLES_INFO = {
@@ -796,7 +490,7 @@
 
                 // Kiểm tra xem người dùng có quyền với nhóm này không
                 const hasAccess = userRoles.includes(roleCode) || userRoles.includes('ROLE_ADMIN');
-                const disabledClass = hasAccess ? '' : 'disabled';
+                if (!hasAccess) continue; // ẨN HOÀN TOÀN KHỎI MENU NẾU KHÔNG CÓ QUYỀN
 
                 if (roleInfo && roleInfo.tasks && roleInfo.tasks.length > 0) {
                     html += `
@@ -819,7 +513,7 @@
                         }
 
                         html += `
-                                <a class="menu-item ${disabledClass}" ${action}>
+                                <a class="menu-item" ${action}>
                                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
                                     ${task.title}
                                 </a>
@@ -1157,35 +851,29 @@
 
         function renderDashboardContent(userRoles) {
             const tasksContainer = document.getElementById('tasksContainer');
-            // Cấu hình tasks mẫu hiển thị ở dashboard
-            const tasks = [
-                { title: 'Cập nhật hệ thống', desc: 'Bản vá mới đã được cài đặt vào lúc 12:00 PM.' }
-            ];
-
             if (userRoles.includes('ROLE_USER') && userRoles.length === 1) {
-                tasksContainer.innerHTML = `<div style="grid-column: 1/-1; padding: 20px; border: 1px dashed #cbd5e1; text-align: center; color: #64748b;">Bạn chưa được phân quyền chức năng cụ thể nào. Xin liên hệ Quản trị viên.</div>`;
+                tasksContainer.innerHTML = `<div style="grid-column: 1/-1; padding: 20px; text-align: center; color: #64748b;">Bạn chưa được phân quyền chức năng cụ thể nào. Xin liên hệ Quản trị viên.</div>`;
                 return;
             }
 
-            let html = '';
-            tasks.forEach(task => {
-                html += `
-                    <div class="task-card">
-                        <div class="task-title">${task.title}</div>
-                        <div class="task-desc">${task.desc}</div>
-                    </div>
-                `;
-            });
-            tasksContainer.innerHTML = html;
-
-            // Tự động ẩn thanh chào mừng và thông báo sau 5 giây
-            setTimeout(() => {
-                const welcomeAlert = document.getElementById('welcomeAlert');
-                if (welcomeAlert) {
-                    welcomeAlert.style.opacity = '0';
-                    setTimeout(() => welcomeAlert.style.display = 'none', 500);
-                }
-            }, 5000);
+            tasksContainer.innerHTML = `
+                <div class="task-card" style="border-left: 4px solid #3b82f6;">
+                    <div class="task-title" style="color: #3b82f6; font-size: 24px;">12</div>
+                    <div class="task-desc">Vị trí đang tuyển</div>
+                </div>
+                <div class="task-card" style="border-left: 4px solid #10b981;">
+                    <div class="task-title" style="color: #10b981; font-size: 24px;">45</div>
+                    <div class="task-desc">CV mới chờ xử lý</div>
+                </div>
+                <div class="task-card" style="border-left: 4px solid #f59e0b;">
+                    <div class="task-title" style="color: #f59e0b; font-size: 24px;">8</div>
+                    <div class="task-desc">Lịch phỏng vấn hôm nay</div>
+                </div>
+                <div class="task-card" style="border-left: 4px solid #8b5cf6;">
+                    <div class="task-title" style="color: #8b5cf6; font-size: 24px;">3</div>
+                    <div class="task-desc">Offer chờ duyệt</div>
+                </div>
+            `;
         }
 
         document.addEventListener('DOMContentLoaded', fetchUserInfo);
@@ -2067,150 +1755,86 @@
             }
         }
 
-        // ========================== CHATBOT LOGIC ==========================
-        function toggleChatbot() {
-            const win = document.getElementById('chatbotWindow');
-            win.classList.toggle('open');
-            if (win.classList.contains('open')) {
-                document.getElementById('chatbotInput').focus();
-            }
-        }
-
-        function handleChatbotKeyPress(e) {
-            if (e.key === 'Enter') sendChatbotMessage();
-        }
-
-        function sendChatbotMessage() {
-            const input = document.getElementById('chatbotInput');
-            const msg = input.value.trim();
-            if (!msg) return;
-
-            appendChatMessage(msg, 'user');
-            input.value = '';
-
-            // Show typing indicator
-            const msgsContainer = document.getElementById('chatbotMessages');
-            const typingDiv = document.createElement('div');
-            typingDiv.className = 'typing-indicator';
-            typingDiv.id = 'chatbotTyping';
-            typingDiv.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
-            msgsContainer.appendChild(typingDiv);
-            msgsContainer.scrollTop = msgsContainer.scrollHeight;
-
-            // Simulate bot response after 1s
-            setTimeout(() => {
-                const typing = document.getElementById('chatbotTyping');
-                if (typing) typing.remove();
-
-                let botReply = "Dạ, tôi chưa hiểu rõ ý của bạn. Bạn có thể hỏi tôi về các tính năng như Tuyển dụng, Lịch phỏng vấn, Duyệt Offer, hoặc thông tin liên hệ hỗ trợ ạ.";
-                const lowerMsg = msg.toLowerCase();
-
-                if (lowerMsg.includes('xin chào') || lowerMsg.includes('hi') || lowerMsg.includes('hello')) {
-                    botReply = "Chào bạn ạ! Chúc bạn một ngày làm việc thật nhiều năng lượng. Tôi có thể hỗ trợ gì cho công việc của bạn hôm nay?";
-                } else if (lowerMsg.includes('chức năng') || lowerMsg.includes('làm được gì') || lowerMsg.includes('giúp gì')) {
-                    botReply = "Dạ, tôi có thể hướng dẫn bạn sử dụng các tính năng trên hệ thống như:\n- Tạo và duyệt Yêu cầu Tuyển dụng\n- Phân công Recruiter\n- Duyệt Offer vượt hạn mức\n- Quản lý lịch phỏng vấn\nBạn cần hỗ trợ cụ thể về tính năng nào ạ?";
-                } else if (lowerMsg.includes('hotline') || lowerMsg.includes('số điện thoại') || lowerMsg.includes('liên hệ') || lowerMsg.includes('hỗ trợ')) {
-                    botReply = "Dạ, bạn có thể liên hệ trực tiếp với bộ phận hỗ trợ kỹ thuật qua Hotline: 000887765414 ạ. Đội ngũ luôn sẵn lòng hỗ trợ bạn 24/7.";
-                } else if (lowerMsg.includes('cảm ơn') || lowerMsg.includes('thanks') || lowerMsg.includes('thank you')) {
-                    botReply = "Dạ không có gì ạ. Rất vui vì đã có thể giúp ích cho bạn. Nếu cần thêm hỗ trợ gì, bạn cứ nhắn tôi nhé!";
-                } else if (lowerMsg.includes('tuyển dụng') || lowerMsg.includes('yêu cầu')) {
-                    botReply = "Dạ, để xử lý Yêu cầu Tuyển dụng, bạn có thể vào mục 'Tạo Yêu cầu Tuyển dụng' nếu bạn là Trưởng bộ phận. Nếu bạn là HR, hãy vào 'Phân công Recruiter' ạ.";
-                } else if (lowerMsg.includes('duyệt') && lowerMsg.includes('offer')) {
-                    botReply = "Dạ, để duyệt Offer vượt hạn mức, bạn hãy chọn menu 'Duyệt Offer vượt hạn mức' ở thanh bên trái, sau đó nhấn 'Phê duyệt' hoặc 'Từ chối' nhé. Hệ thống sẽ tự động gửi email cho ứng viên.";
-                } else if (lowerMsg.includes('phỏng vấn')) {
-                    botReply = "Dạ, Lịch phỏng vấn được quản lý bởi Recruiter. Nếu bạn là Người phỏng vấn, hãy xem mục 'Xem lịch phỏng vấn' để lấy link Meet ạ.";
-                }
-
-                appendChatMessage(botReply, 'bot');
-            }, 1000);
-        }
-
-        function appendChatMessage(text, sender) {
-            const container = document.getElementById('chatbotMessages');
-            const msgDiv = document.createElement('div');
-            msgDiv.className = 'chat-msg ' + sender;
-            msgDiv.textContent = text;
-            container.appendChild(msgDiv);
-            container.scrollTop = container.scrollHeight;
-        }
-
-        document.getElementById('changePasswordForm').addEventListener('submit', async function (e) {
-            e.preventDefault();
-            const cp_current = document.getElementById('cp_current').value;
-            const cp_new = document.getElementById('cp_new').value;
-            const cp_confirm = document.getElementById('cp_confirm').value;
-
-            if (cp_new !== cp_confirm) {
-                alert("Mật khẩu xác nhận không khớp!");
-                return;
-            }
-
-            const btn = document.getElementById('cp_submit');
-            btn.disabled = true;
-            btn.innerText = "Đang xử lý...";
-
-            const token = localStorage.getItem('accessToken');
-            try {
-                const response = await fetch('http://localhost:8080/api/auth/change-password', {
-                    method: 'POST',
-                    headers: {
-                        'Authorization': 'Bearer ' + token,
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        currentPassword: cp_current,
-                        newPassword: cp_new,
-                        confirmPassword: cp_confirm
-                    })
-                });
-                const data = await response.json();
-                if (response.ok && data.success) {
-                    alert("Đổi mật khẩu thành công! Chuyển hướng sau 2s...");
-                    setTimeout(() => {
-                        localStorage.removeItem('accessToken');
-                        localStorage.removeItem('refreshToken');
-                        localStorage.removeItem('userRoles');
-                        window.location.href = 'login.html?session=changed';
-                    }, 2000);
-                } else {
-                    let msg = data.message || "Đổi mật khẩu thất bại";
-                    if (data.errors && Object.keys(data.errors).length > 0) {
-                        msg = Object.values(data.errors)[0];
-                    }
-                    alert(msg);
-                    btn.disabled = false;
-                    btn.innerText = "Lưu thay đổi";
-                }
-            } catch (error) {
-                alert("Lỗi kết nối");
-                btn.disabled = false;
-                btn.innerText = "Lưu thay đổi";
-            }
-        });
-
         function openChangePasswordModal() {
-            document.getElementById('changePasswordForm').reset();
-            document.getElementById('cp_submit').disabled = false;
-            document.getElementById('cp_submit').innerText = "Lưu thay đổi";
-            document.getElementById('changePasswordModal').style.display = 'block';
-        }
+            document.getElementById('pageTitle').innerText = 'Đổi Mật Khẩu';
+            document.getElementById('pageContent').innerHTML = `
+                <div style="max-width: 500px; margin: 40px auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #e2e8f0;">
+                    <form id="inlineChangePasswordForm">
+                        <div class="form-group" style="margin-bottom: 24px;">
+                            <label style="display: block; margin-bottom: 8px; color: #334155; font-size: 14px; font-weight: 600;">Mật khẩu hiện tại</label>
+                            <input type="password" id="cp_current" style="width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; font-size: 15px; transition: border-color 0.2s;" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 24px;">
+                            <label style="display: block; margin-bottom: 8px; color: #334155; font-size: 14px; font-weight: 600;">Mật khẩu mới</label>
+                            <input type="password" id="cp_new" placeholder="Tối thiểu 8 ký tự, gồm chữ và số" style="width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; font-size: 15px; transition: border-color 0.2s;" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 32px;">
+                            <label style="display: block; margin-bottom: 8px; color: #334155; font-size: 14px; font-weight: 600;">Xác nhận mật khẩu mới</label>
+                            <input type="password" id="cp_confirm" style="width: 100%; padding: 14px; border: 1px solid #cbd5e1; border-radius: 8px; outline: none; font-size: 15px; transition: border-color 0.2s;" required>
+                        </div>
+                        <button type="submit" id="cp_submit" style="width: 100%; padding: 14px; background: #2563eb; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 16px; transition: background 0.3s; box-shadow: 0 4px 6px rgba(37,99,235,0.2);">
+                            Cập nhật mật khẩu
+                        </button>
+                    </form>
+                </div>
+            `;
 
-        function closeChangePasswordModal() {
-            document.getElementById('changePasswordModal').style.display = 'none';
-        }
+            document.getElementById('inlineChangePasswordForm').addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const cp_current = document.getElementById('cp_current').value;
+                const cp_new = document.getElementById('cp_new').value;
+                const cp_confirm = document.getElementById('cp_confirm').value;
 
-        // Close modal when clicking outside
-        window.addEventListener('click', function (event) {
-            if (event.target == document.getElementById('changePasswordModal')) {
-                closeChangePasswordModal();
-            }
-        });
+                if (cp_new !== cp_confirm) {
+                    alert("Mật khẩu xác nhận không khớp!");
+                    return;
+                }
+
+                const btn = document.getElementById('cp_submit');
+                btn.disabled = true;
+                btn.innerText = "Đang xử lý...";
+
+                const token = localStorage.getItem('accessToken');
+                try {
+                    const response = await fetch('/api/auth/change-password', {
+                        method: 'POST',
+                        headers: {
+                            'Authorization': 'Bearer ' + token,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            currentPassword: cp_current,
+                            newPassword: cp_new,
+                            confirmPassword: cp_confirm
+                        })
+                    });
+                    const data = await response.json();
+                    if (response.ok && data.success) {
+                        alert("Đổi mật khẩu thành công! Vui lòng đăng nhập lại.");
+                        localStorage.clear();
+                        window.location.href = 'login.html';
+                    } else {
+                        let msg = data.message || "Đổi mật khẩu thất bại";
+                        if (data.errors && Object.keys(data.errors).length > 0) {
+                            msg = Object.values(data.errors)[0];
+                        }
+                        alert(msg);
+                        btn.disabled = false;
+                        btn.innerText = "Cập nhật mật khẩu";
+                    }
+                } catch (error) {
+                    alert("Lỗi kết nối máy chủ!");
+                    btn.disabled = false;
+                    btn.innerText = "Cập nhật mật khẩu";
+                }
+            });
+        }
     </script>
     <script>
-        // Idle timeout script (30 seconds)
+        // Idle timeout script (90 seconds)
         (function () {
             let idleTime = 0;
-            const maxIdleTime = 30; // seconds
+            const maxIdleTime = 90; // seconds
 
             function resetTimer() {
                 idleTime = 0;
